@@ -1,0 +1,1353 @@
+$big: "Big Shoulders Display", sans-serif;
+$red: #e84a4a;
+$letter: 7.5%;
+$transition: all 0.5s;
+$green: #7dff68;
+$big-fw: 743;
+$gray: #7a7a7a;
+
+body {
+  font-family: "Iceland", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #fff;
+  font-size: 18px;
+  line-height: 21.55px;
+  letter-spacing: 0.075em;
+  text-transform: uppercase;
+  overflow: hidden;
+}
+.disabled {
+  opacity: 0;
+  visibility: hidden;
+  display: none !important;
+}
+
+.wrapper {
+  padding: 0 80px;
+  background-color: #000003;
+  height: 100vh;
+  position: relative;
+  &::after {
+    content: "";
+    position: fixed; /* Абсолютное позиционирование */
+    right: 0;
+    top: 0; /* Положение треугольника */
+    width: 0px;
+    height: 0px;
+
+    border-top-width: 450px;
+    border-top-style: solid;
+    border-left-width: 290px;
+    border-left-style: solid;
+    border-image: linear-gradient(
+      242.06deg,
+      rgba(232, 74, 74, 0.33) 0%,
+      rgba(232, 74, 74, 0) 46.83%
+    );
+
+    // background: linear-gradient(242.06deg, rgba(232, 74, 74, 0.33) 0%, rgba(232, 74, 74, 0) 34.83%);
+  }
+}
+
+// ------------------Welcome-----------------
+
+.welcome {
+  height: 100vh;
+  display: flex;
+  gap: 85px;
+  align-items: center;
+  justify-content: center;
+  transition: $transition;
+  &-text {
+    font-weight: $big-fw;
+    color: $red;
+    font-size: 538px;
+    font-family: $big;
+    line-height: 643.99px;
+    letter-spacing: -0.06em;
+    animation: textMove infinite 2s;
+  }
+  &-info {
+    max-width: 735px;
+    & h2 {
+      font-size: 26px;
+      font-family: Iceland;
+      font-size: 26px;
+      line-height: 25.22px;
+      margin-bottom: 45px;
+    }
+    & p {
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 26px;
+      margin-bottom: 30px;
+    }
+    & button {
+      font-family: $big;
+      color: $red;
+      padding: 15px 50px;
+      border: 1px solid $red;
+      font-size: 22px;
+      font-weight: $big-fw;
+      line-height: 26.33px;
+      background-color: transparent;
+      text-transform: uppercase;
+      transition: $transition;
+      &:hover {
+        color: #fff;
+        border-color: #fff;
+        transform: scale(1.2);
+      }
+    }
+  }
+}
+
+@keyframes textMove {
+  25% {
+    transform: rotateZ(-3deg);
+  }
+  50% {
+    transform: rotateZ(0deg);
+  }
+  75% {
+    transform: rotateZ(3deg);
+  }
+  100% {
+    transform: rotateZ(0deg);
+  }
+}
+
+// ---------------Header--------------
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  &-left {
+    display: flex;
+    gap: 45px;
+    &-level {
+      display: flex;
+      gap: 4px;
+      align-items: center;
+    }
+    &-coins {
+      display: flex;
+      align-items: center;
+      & span {
+        margin-right: 6px;
+      }
+    }
+    & span {
+      font-family: $big;
+      font-weight: $big-fw;
+      color: $green;
+      line-height: 31.12px;
+      font-size: 26px;
+    }
+    & p {
+      font-family: $big;
+      font-weight: $big-fw;
+      line-height: 19.15px;
+      font-size: 16px;
+    }
+    & img {
+      max-width: 100%;
+      padding: 10px;
+      border: 1px solid #ffffff4a;
+      margin-right: 13px;
+      cursor: pointer;
+    }
+  }
+  &-right {
+    display: flex;
+    gap: 27px;
+    align-items: center;
+    & a {
+      font-size: 12px;
+      line-height: 14.64px;
+      transition: $transition;
+      &:hover {
+        text-decoration: underline;
+        transform: scale(1.2);
+      }
+    }
+    & p {
+      font-size: 14px;
+      line-height: 13.58px;
+      color: $gray;
+    }
+    & span {
+      color: #fff;
+    }
+  }
+}
+
+// -------------------Main-About----------------------------
+
+.main {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.about {
+  max-height: 896px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &-block {
+    margin-bottom: 20px;
+    position: relative;
+    max-width: max-content;
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #e84a4a;
+      border-left: 2px solid #e84a4a;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      border-top: 2px solid #e84a4a;
+      border-right: 2px solid #e84a4a;
+    }
+    &-row {
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid #e84a4a;
+        border-right: 2px solid #e84a4a;
+      }
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 8px;
+        height: 8px;
+        border-bottom: 2px solid #e84a4a;
+        border-left: 2px solid #e84a4a;
+      }
+    }
+    & img {
+      max-height: 100%;
+      padding: 13px;
+      border: 1px solid #ffffff21;
+    }
+  }
+  & span {
+    font-size: 14px;
+    line-height: 13.58px;
+    margin-bottom: 4px;
+  }
+  & h3 {
+    color: $red;
+    font-family: $big;
+    font-weight: $big-fw;
+    font-size: 18px;
+    line-height: 21.55px;
+    margin-bottom: 22px;
+  }
+  &-availability {
+    & button {
+      display: block;
+      color: #000003;
+      max-width: 194px;
+      width: 100%;
+      background-color: rgb(232, 74, 74, 0.7);
+      font-family: $big;
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 21.55px;
+      text-align: left;
+      padding-left: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.075em;
+      position: relative;
+      margin-bottom: 22px;
+      transition: $transition;
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+        transform: scale(1.1);
+      }
+    }
+  }
+  &-social {
+    & button {
+      font-family: $big;
+      font-size: 18px;
+      font-weight: $big-fw;
+      line-height: 21.55px;
+      letter-spacing: 0.075em;
+      text-align: left;
+      display: block;
+      max-width: 194px;
+      width: 100%;
+      border: 1px solid $red;
+      background-color: transparent;
+      color: $red;
+      text-transform: uppercase;
+      padding: 7px 0px 4px 7px;
+      display: flex;
+      align-items: center;
+      max-height: 33px;
+      transition: $transition;
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+        transform: scale(1.1);
+      }
+      & span {
+        font-size: 18px;
+        font-weight: $big-fw;
+        line-height: 21.55px;
+        letter-spacing: 0.075em;
+        text-align: left;
+        margin-bottom: 0;
+      }
+      & img {
+        margin-left: 30px;
+        max-width: 100%;
+        margin-top: -2px;
+      }
+    }
+  }
+  &-motto {
+    & span {
+      font-size: 18px;
+      line-height: 17.46px;
+      margin-bottom: 6px;
+      color: $red;
+    }
+    & p {
+      font-size: 16px;
+      line-height: 15.52px;
+      color: #b2b7ba;
+      max-width: 194px;
+    }
+  }
+}
+
+// -------------hexagon---------------------
+
+.hexagon,
+.hexagon::after,
+.hexagon::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon {
+  transform: rotate(30deg);
+}
+
+.hexagon-2,
+.hexagon-2::after,
+.hexagon-2::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-2::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-2::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-2 {
+  transform: rotate(30deg);
+}
+
+.hexagon-3,
+.hexagon-3::after,
+.hexagon-3::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-3::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-3::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-3 {
+  transform: rotate(30deg);
+}
+
+.hexagons {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-2 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-3 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// -----------------------Main-quest-------------------------
+
+.quest {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  &-inner {
+    border-left: 2px solid $red;
+    max-width: 196px;
+    margin-bottom: 200px;
+    &-btn-one {
+      display: block;
+      font-family: $big;
+      font-size: 18px;
+      font-weight: $big-fw;
+      line-height: 21.55px;
+      letter-spacing: 0.075em;
+      max-width: 196px;
+      width: 100%;
+      background-color: rgb(232, 74, 74, 0.7);
+      text-align: left;
+      text-transform: uppercase;
+      padding: 1px 0 1px 8px;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      z-index: 5;
+      transition: $transition;
+      &:hover {
+        color: #fff;
+      }
+    }
+    &-btn-two {
+      position: relative;
+      z-index: 5;
+      font-family: Iceland;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 13.58px;
+      text-align: left;
+      color: $gray;
+      text-transform: uppercase;
+      max-width: 196px;
+      width: 100%;
+      padding: 8px 10px 8px 8px;
+      background: linear-gradient(
+        242.06deg,
+        rgba(232, 74, 74, 0.33) 0%,
+        rgba(232, 74, 74, 0) 115.83%
+      );
+      margin-bottom: 15px;
+      transition: $transition;
+      &:hover {
+        color: #fff;
+      }
+    }
+    & h3 {
+      line-height: 13.58px;
+      margin-left: 8px;
+      margin-bottom: 4px;
+    }
+    & h4 {
+      color: $red;
+      font-family: $big;
+      font-size: 18px;
+      font-weight: $big-fw;
+      line-height: 21.55px;
+      margin-left: 8px;
+      margin-bottom: 23px;
+    }
+    & p {
+      color: $gray;
+      font-size: 14px;
+      line-height: 13.58px;
+      margin-left: 8px;
+      margin-bottom: 23px;
+    }
+  }
+  &-reward {
+    margin-left: 8px;
+    margin-top: 12px;
+    display: flex;
+    gap: 8px;
+    & div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & img {
+        z-index: 5;
+        cursor: pointer;
+        max-width: 100%;
+        transition: $transition;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+      & span {
+        font-size: 14px;
+        line-height: 13.58px;
+        color: $gray;
+      }
+    }
+  }
+  &-setting {
+    z-index: 6;
+    max-width: 194px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    & span {
+      font-family: $big;
+      font-weight: $big-fw;
+      line-height: 21.55px;
+      color: $red;
+    }
+    &-sound {
+      width: 100%;
+      z-index: 5;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: $transition;
+      :hover {
+        color: #fff;
+      }
+      & div {
+        border: 1px solid $red;
+        width: 33px;
+        height: 33px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & img {
+          max-width: 100%;
+          transition: $transition;
+        }
+      }
+    }
+    &-music {
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid #262626;
+        width: 33px;
+        height: 33px;
+        & img {
+          max-width: 100%;
+        }
+      }
+    }
+    &-visual {
+      cursor: pointer;
+      padding: 5px 4px 4px 7px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border: 1px solid #262626;
+      transition: $transition;
+      &:hover {
+        color: #fff;
+        border-color: #fff;
+      }
+      & span {
+        margin-bottom: -1px;
+        transition: $transition;
+        &:hover {
+          color: #fff;
+        }
+      }
+      & img {
+        animation: GearMove 20s infinite;
+      }
+    }
+  }
+}
+
+@keyframes GearMove {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.inactive {
+  opacity: 0.5;
+}
+
+.check--disable {
+  opacity: 0;
+  visibility: hidden;
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-4,
+.hexagon-4::after,
+.hexagon-4::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-4::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-4::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-4 {
+  transform: rotate(30deg);
+}
+
+.hexagon-5,
+.hexagon-5::after,
+.hexagon-5::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-5::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-5::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-5 {
+  transform: rotate(30deg);
+}
+
+.hexagon-6,
+.hexagon-6::after,
+.hexagon-6::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-6::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-6::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-6 {
+  transform: rotate(30deg);
+}
+
+.hexagons-4 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-5 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-6 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// -------------Main-Begin-----------------------------------------
+.begin {
+  position: relative;
+  max-width: 1344px;
+  max-height: 750px;
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #e84a4a;
+    border-left: 2px solid #e84a4a;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 8px;
+    height: 8px;
+    border-top: 2px solid #e84a4a;
+    border-right: 2px solid #e84a4a;
+  }
+  &-row {
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid #e84a4a;
+      border-left: 2px solid #e84a4a;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 8px;
+      height: 8px;
+      border-bottom: 2px solid #e84a4a;
+      border-right: 2px solid #e84a4a;
+    }
+  }
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ffffff21;
+  }
+
+  &-text {
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    transform: translate(-50%);
+    max-width: 623px;
+    & h4 {
+      line-height: 17.46px;
+      margin-bottom: 9px;
+    }
+    & p {
+      font-size: 14px;
+      line-height: 13.58px;
+      text-align: center;
+      opacity: 0.7;
+    }
+  }
+}
+
+// -----------------nav----------------------------------
+.menu {
+  position: relative;
+  z-index: 5;
+  margin-top: -26px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  //   bottom: 7.6%;
+  //   left: 50%;
+  //   transform: translate(-50%);
+  gap: 15px;
+  & li {
+    border-left: 2px solid #242425;
+    max-width: 151px;
+    & button {
+      width: 100%;
+      font-family: $big;
+      font-size: 18px;
+      font-weight: $big-fw;
+      letter-spacing: 0.075em;
+      text-align: left;
+      text-transform: uppercase;
+      background-color: rgb(36, 36, 37, 0.7);
+      height: 26px;
+      color: #fff;
+      padding: 0px 10px 0 8px;
+      position: relative;
+      overflow: hidden;
+    }
+    & p {
+      opacity: 0.5;
+      font-size: 7px;
+      line-height: 6.79px;
+      padding: 8px 10px 4px 8px;
+      background-color: rgb(51, 51, 51, 0.1);
+      height: 36px;
+    }
+  }
+}
+
+.nav li.active {
+  border-color: $red;
+}
+
+.nav li button.active {
+  background-color: rgb(232, 74, 74, 0.7);
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-7,
+.hexagon-7::after,
+.hexagon-7::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-7::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-7::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-7 {
+  transform: rotate(30deg);
+}
+
+.hexagon-8,
+.hexagon-8::after,
+.hexagon-8::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-8::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-8::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-8 {
+  transform: rotate(30deg);
+}
+
+.hexagon-9,
+.hexagon-9::after,
+.hexagon-9::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-9::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-9::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-9 {
+  transform: rotate(30deg);
+}
+
+.hexagons-7 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-8 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-9 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-10,
+.hexagon-10::after,
+.hexagon-10::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-10::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-10::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-10 {
+  transform: rotate(30deg);
+}
+
+.hexagon-11,
+.hexagon-11::after,
+.hexagon-11::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-11::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-11::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-11 {
+  transform: rotate(30deg);
+}
+
+.hexagon-12,
+.hexagon-12::after,
+.hexagon-12::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-12::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-12::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-12 {
+  transform: rotate(30deg);
+}
+
+.hexagons-10 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-11 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-12 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-13,
+.hexagon-13::after,
+.hexagon-13::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-13::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-13::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-13 {
+  transform: rotate(30deg);
+}
+
+.hexagon-14,
+.hexagon-14::after,
+.hexagon-14::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-14::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-14::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-14 {
+  transform: rotate(30deg);
+}
+
+.hexagon-15,
+.hexagon-15::after,
+.hexagon-15::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-15::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-15::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-15 {
+  transform: rotate(30deg);
+}
+
+.hexagons-13 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-14 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-15 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-16,
+.hexagon-16::after,
+.hexagon-16::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-16::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-16::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-16 {
+  transform: rotate(30deg);
+}
+
+.hexagon-17,
+.hexagon-17::after,
+.hexagon-17::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-17::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-17::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-17 {
+  transform: rotate(30deg);
+}
+
+.hexagon-18,
+.hexagon-18::after,
+.hexagon-18::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-18::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-18::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-18 {
+  transform: rotate(30deg);
+}
+
+.hexagons-16 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-17 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-18 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
+
+// ----------Xegagon-----------------
+
+.hexagon-19,
+.hexagon-19::after,
+.hexagon-19::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-19::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-19::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-19 {
+  transform: rotate(30deg);
+}
+
+.hexagon-20,
+.hexagon-20::after,
+.hexagon-20::before {
+  position: absolute;
+  top: 47.8%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-20::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-20::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-20 {
+  transform: rotate(30deg);
+}
+
+.hexagon-21,
+.hexagon-21::after,
+.hexagon-21::before {
+  position: absolute;
+  top: 49%;
+  left: 51.2%;
+  transform: translate(-50%, -50%);
+  width: 18px;
+  height: 10px;
+  border: 1px solid #000003;
+  border-top: none;
+  border-bottom: none;
+}
+.hexagon-21::after {
+  content: "";
+  transform: translate(-50%, -50%) rotate(60deg);
+}
+.hexagon-21::before {
+  content: "";
+  transform: translate(-50%, -50%) rotate(-60deg);
+}
+
+.hexagon-21 {
+  transform: rotate(30deg);
+}
+
+.hexagons-19 {
+  position: absolute;
+  top: -5px;
+  right: 27px;
+}
+
+.hexagons-20 {
+  position: absolute;
+  top: 14px;
+  right: 27px;
+}
+.hexagons-21 {
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
